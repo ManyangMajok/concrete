@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Concrete World | Modern Construction & Concrete Solutions</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="#" class="logo">
+          <span class="logo-text">CONCRETE <span class="highlight">WORLD</span></span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="team.html">Our Team</a></li>
+        </ul>
+        <div class="nav-actions">
+          <a href="#" class="btn btn-primary quote-trigger">Get Quote</a>
+          <button class="mobile-menu-btn" style="color: var(--darker);"><i class="fa-solid fa-bars"></i></button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-content fade-in-up">
+        <h1>We Build Something <span class="highlight">Solid And Consistent.</span></h1>
+        <p>Your ideas and designs are transformed by us into long-lasting, engineered concrete structures. Excellence in every pour.</p>
+        <div class="hero-btns fade-in-up delay-2">
+          <a href="#" class="btn btn-primary quote-trigger">Get Started <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="services.html" class="btn btn-outline">Our Services <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="hero-image fade-in-left">
+        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Construction Worker" class="main-img" />
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section-padding">
+      <div class="container about-grid">
+        <div class="about-text slide-in-left">
+          <h2>Welcome To Concrete <br>Real Solution.</h2>
+          <p>We provide top-tier concrete solutions for commercial and residential projects. Our expertise ensures durability, strength, and aesthetic appeal in every structure.</p>
+          <ul class="features-list">
+            <li><i class="fa-solid fa-circle-check"></i> High-quality ready-mix concrete</li>
+            <li><i class="fa-solid fa-circle-check"></i> Advanced structural engineering</li>
+            <li><i class="fa-solid fa-circle-check"></i> Expert pouring and finishing</li>
+            <li><i class="fa-solid fa-circle-check"></i> On-time project delivery</li>
+          </ul>
+          <a href="about.html" class="btn btn-primary">Read More <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="about-images slide-in-right">
+          <!-- Puzzle shape mask using CSS -->
+          <div class="image-mask-container">
+            <img src="/src/assets/images/mixer.jpg" alt="Concrete Mixer Truck" class="mask-img-1" />
+            <img src="/src/assets/images/pour.jpg" alt="Concrete Pouring" class="mask-img-2" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services section-padding bg-light">
+      <div class="container">
+        <div class="section-header">
+          <h2>We Provide Services</h2>
+          <p>Delivering exceptional concrete services tailored to meet the demands of modern infrastructure.</p>
+        </div>
+        <div class="services-grid">
+          <!-- Service Card 1 -->
+          <div class="service-card fade-in-up">
+            <div class="icon-wrapper"><i class="fa-solid fa-building"></i></div>
+            <h3>Commercial Concrete</h3>
+            <p>High-capacity foundations, slabs, and structural concrete for commercial buildings.</p>
+            <a href="#" class="btn btn-outline-small quote-trigger" data-service="commercial">Get Started <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+          <!-- Service Card 2 (Active/Highlighted) -->
+          <div class="service-card active fade-in-up delay-1">
+            <div class="icon-wrapper"><i class="fa-solid fa-house"></i></div>
+            <h3>Residential Foundations</h3>
+            <p>Reliable and durable concrete foundations, driveways, and patios for homes.</p>
+            <a href="#" class="btn btn-primary-small quote-trigger" data-service="residential">Get Started <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+          <!-- Service Card 3 -->
+          <div class="service-card fade-in-up delay-2">
+            <div class="icon-wrapper"><i class="fa-solid fa-hammer"></i></div>
+            <h3>Structural Repair</h3>
+            <p>Expert concrete repair and reinforcement to extend the lifespan of structures.</p>
+            <a href="#" class="btn btn-outline-small quote-trigger" data-service="repair">Get Started <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="slider-controls">
+          <button class="control-btn"><i class="fa-solid fa-arrow-left"></i></button>
+          <button class="control-btn active"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section-padding">
+      <div class="container testimonial-grid">
+        <div class="testimonial-header slide-in-left">
+          <h2>Hear From Our Satisfied Clients</h2>
+          <p>We pride ourselves on delivering quality concrete work that exceeds expectations. See what our partners have to say.</p>
+        </div>
+        <div class="testimonial-cards slide-in-right">
+          <div class="t-card back-card">
+            <div class="t-profile">
+              <img src="/src/assets/images/engineer1.jpg" alt="Client 2" />
+              <div>
+                <h4>Johan Mickel</h4>
+                <span>Project Manager</span>
+              </div>
+            </div>
+            <div class="stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p>"Outstanding concrete work on our latest commercial development."</p>
+          </div>
+          <div class="t-card front-card">
+            <div class="t-profile">
+              <img src="/src/assets/images/engineer2.jpg" alt="Client 1" />
+              <div>
+                <h4>Larem Jemes</h4>
+                <span>Civil Engineer</span>
+              </div>
+            </div>
+            <div class="stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p>"The team delivered exceptional quality with the ready-mix pour. Highly recommended."</p>
+          </div>
+          <div class="slider-controls t-controls">
+            <button class="control-btn"><i class="fa-solid fa-arrow-left"></i></button>
+            <button class="control-btn active"><i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- News & Projects Section -->
+    <section id="projects" class="news section-padding bg-light">
+      <div class="container">
+        <div class="news-header">
+          <div>
+            <h2>Latest Projects and News</h2>
+            <p>Stay updated with our recent concrete pours and construction achievements.</p>
+          </div>
+          <a href="projects.html" class="btn btn-primary-small">See All <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="news-grid">
+          <div class="news-main fade-in-up">
+            <img src="/src/assets/images/commercial.jpg" alt="Large Concrete Project" />
+            <div class="news-content">
+              <h3>Massive Foundation Pour for City Mall</h3>
+              <p>Over 10,000 cubic yards of concrete successfully poured in record time.</p>
+              <a href="projects.html" class="read-more"><i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="news-side">
+            <div class="news-item fade-in-up delay-1">
+              <img src="/src/assets/images/repair.jpg" alt="Bridge Concrete Project" />
+              <div class="news-content">
+                <h3>Bridge Pier Reinforcement</h3>
+                <p>Advanced structural repair completed.</p>
+                <a href="projects.html" class="read-more"><i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+            <div class="news-item fade-in-up delay-2">
+              <img src="/src/assets/images/residential.jpg" alt="Residential Concrete Project" />
+              <div class="news-content">
+                <h3>Residential Driveway Finishing</h3>
+                <p>High-quality stamped concrete work.</p>
+                <a href="projects.html" class="read-more"><i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-top">
+          <a href="#" class="logo footer-logo">
+            <span class="logo-text">CONCRETE <span class="highlight">WORLD</span></span>
+          </a>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="#" class="quote-trigger" style="color: var(--darker);">Contact</a></li>
+            <li><a href="services.html">Service</a></li>
+            <li><a href="team.html">Our Team</a></li>
+          </ul>
+          <div class="social-links">
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 Concrete World. All copyrights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services | Concrete World</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="/src/style.css" />
+    <style>
+      .page-header { background-color: var(--darker); padding: 150px 0 80px; text-align: center; color: var(--white); }
+      .page-header h1 { font-size: 3.5rem; color: var(--white); margin-bottom: 15px; }
+      .page-header p { font-size: 1.1rem; color: #CBD5E1; max-width: 600px; margin: 0 auto; }
+      
+      .services-section { padding: 80px 0; }
+      .service-detail { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; margin-bottom: 100px; }
+      .service-detail:nth-child(even) { direction: rtl; }
+      .service-detail:nth-child(even) .s-text { direction: ltr; }
+      .s-img { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 20px; box-shadow: var(--shadow); }
+      .s-text h2 { font-size: 2.5rem; margin-bottom: 20px; }
+      .s-text p { font-size: 1.1rem; color: var(--text); margin-bottom: 30px; line-height: 1.8; }
+      
+      .process-section { background-color: var(--light); padding: 80px 0; }
+      .process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; margin-top: 40px; }
+      .process-card { background-color: var(--white); padding: 40px 30px; border-radius: 15px; text-align: center; box-shadow: var(--shadow); position: relative; }
+      .process-card .step-num { position: absolute; top: -20px; left: 50%; transform: translateX(-50%); width: 40px; height: 40px; background-color: var(--primary); color: var(--darker); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2rem; border: 4px solid var(--light); }
+      .process-card i { font-size: 2.5rem; color: var(--dark); margin-bottom: 20px; margin-top: 10px; }
+      .process-card h3 { margin-bottom: 15px; }
+      .process-card p { color: var(--text); font-size: 0.95rem; }
+      
+      @media (max-width: 992px) {
+        .service-detail { grid-template-columns: 1fr; gap: 30px; margin-bottom: 60px; }
+        .service-detail:nth-child(even) { direction: ltr; }
+        .process-grid { grid-template-columns: repeat(2, 1fr); }
+      }
+      @media (max-width: 768px) {
+        .process-grid { grid-template-columns: 1fr; }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar scrolled" style="position: fixed; background-color: var(--white); box-shadow: 0 2px 10px rgba(0,0,0,0.1); padding: 15px 0;">
+      <div class="nav-container">
+        <a href="index.html" class="logo" style="color: var(--darker);">
+          <span class="logo-text">CONCRETE <span class="highlight">WORLD</span></span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html" style="color: var(--darker);">Home</a></li>
+          <li><a href="about.html" style="color: var(--darker);">About Us</a></li>
+          <li><a href="services.html" style="color: var(--primary);">Services</a></li>
+          <li><a href="projects.html" style="color: var(--darker);">Projects</a></li>
+          <li><a href="team.html" style="color: var(--darker);">Our Team</a></li>
+        </ul>
+        <div class="nav-actions">
+          <a href="#" class="btn btn-primary quote-trigger">Get Quote</a>
+          <button class="mobile-menu-btn" style="color: var(--darker);"><i class="fa-solid fa-bars"></i></button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="container fade-in-up">
+        <h1>Our Expertise</h1>
+        <p>Comprehensive concrete solutions ranging from large-scale commercial pours to custom residential hardscaping.</p>
+      </div>
+    </section>
+
+    <!-- Detailed Services -->
+    <section class="services-section">
+      <div class="container">
+        
+        <div class="service-detail fade-in-up delay-1">
+          <div class="s-text">
+            <h2>Commercial Concrete</h2>
+            <p>From large-scale retail foundations to high-rise structural concrete, our commercial division handles the most demanding projects. We specialize in heavy-duty slabs, retaining walls, and custom architectural concrete designed to handle immense loads and traffic.</p>
+            <ul class="features-list" style="margin-bottom: 30px;">
+              <li><i class="fa-solid fa-check" style="color: var(--primary);"></i> Tilt-up Construction</li>
+              <li><i class="fa-solid fa-check" style="color: var(--primary);"></i> Industrial Machine Foundations</li>
+              <li><i class="fa-solid fa-check" style="color: var(--primary);"></i> Parking Garages & Lots</li>
+            </ul>
+            <a href="#" class="btn btn-outline-small quote-trigger" data-service="commercial">Request Commercial Quote <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+          <img src="/src/assets/images/commercial.jpg" alt="Commercial Concrete" class="s-img" />
+        </div>
+
+        <div class="service-detail fade-in-up delay-2">
+          <div class="s-text">
+            <h2>Residential Foundations & Hardscaping</h2>
+            <p>We build the solid ground your home stands on. Our residential services include foundation pouring, basement floors, decorative stamped concrete driveways, and expansive patios designed for longevity and curb appeal.</p>
+            <ul class="features-list" style="margin-bottom: 30px;">
+              <li><i class="fa-solid fa-check" style="color: var(--primary);"></i> Custom Stamped Driveways</li>
+              <li><i class="fa-solid fa-check" style="color: var(--primary);"></i> Retaining Walls & Footings</li>
+              <li><i class="fa-solid fa-check" style="color: var(--primary);"></i> Basement & Garage Slabs</li>
+            </ul>
+            <a href="#" class="btn btn-primary-small quote-trigger" data-service="residential">Request Residential Quote <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+          <img src="/src/assets/images/residential.jpg" alt="Residential Concrete" class="s-img" />
+        </div>
+
+        <div class="service-detail fade-in-up delay-1">
+          <div class="s-text">
+            <h2>Structural Repair & Restoration</h2>
+            <p>Concrete degrades over time without proper care. We provide advanced epoxy injections, spall repair, and full structural reinforcements to restore the safety and appearance of aging concrete structures.</p>
+            <ul class="features-list" style="margin-bottom: 30px;">
+              <li><i class="fa-solid fa-check" style="color: var(--primary);"></i> Epoxy Crack Injection</li>
+              <li><i class="fa-solid fa-check" style="color: var(--primary);"></i> Spalling & Scaling Repair</li>
+              <li><i class="fa-solid fa-check" style="color: var(--primary);"></i> Bridge & Overpass Reinforcement</li>
+            </ul>
+            <a href="#" class="btn btn-outline-small quote-trigger" data-service="repair">Get an Inspection <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+          <img src="/src/assets/images/repair.jpg" alt="Structural Repair" class="s-img" />
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Our Process Section -->
+    <section class="process-section">
+      <div class="container">
+        <div class="section-header text-center" style="margin-bottom: 50px;">
+          <h2>Our 4-Step Process</h2>
+          <p>How we ensure perfection from planning to curing.</p>
+        </div>
+        <div class="process-grid">
+          <div class="process-card fade-in-up">
+            <div class="step-num">1</div>
+            <i class="fa-solid fa-clipboard-list"></i>
+            <h3>Consultation</h3>
+            <p>We assess the site, review architectural plans, and provide a detailed, transparent estimate.</p>
+          </div>
+          <div class="process-card fade-in-up delay-1">
+            <div class="step-num">2</div>
+            <i class="fa-solid fa-ruler-combined"></i>
+            <h3>Preparation</h3>
+            <p>Site grading, formwork setup, and precise rebar/mesh placement to ensure structural strength.</p>
+          </div>
+          <div class="process-card fade-in-up delay-2">
+            <div class="step-num">3</div>
+            <i class="fa-solid fa-truck-monster"></i>
+            <h3>The Pour</h3>
+            <p>Executing the pour with high-grade ready-mix, followed by immediate professional finishing.</p>
+          </div>
+          <div class="process-card fade-in-up delay-3">
+            <div class="step-num">4</div>
+            <i class="fa-solid fa-temperature-arrow-up"></i>
+            <h3>Curing & QA</h3>
+            <p>Applying curing compounds and conducting a final quality assurance walkthrough with the client.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-top">
+          <a href="index.html" class="logo footer-logo">
+            <span class="logo-text">CONCRETE <span class="highlight">WORLD</span></span>
+          </a>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="team.html">Our Team</a></li>
+            <li><a href="#" class="quote-trigger">Contact</a></li>
+          </ul>
+          <div class="social-links">
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 Concrete World. All copyrights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
