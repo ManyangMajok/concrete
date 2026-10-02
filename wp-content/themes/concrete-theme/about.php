@@ -1,10 +1,11 @@
+<?php /* Template Name: about */ ?>
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Us | Concrete World</title>
+    <title>About Us | Conc Care Group</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,7 +13,7 @@
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Main CSS -->
-    <link rel="stylesheet" href="/src/style.css" />
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/src/style.css" />
     <style>
       .page-header { background-color: var(--darker); padding: 150px 0 80px; text-align: center; color: var(--white); }
       .page-header h1 { font-size: 3.5rem; color: var(--white); margin-bottom: 15px; }
@@ -40,20 +41,22 @@
         .right-timeline { left: 0%; }
       }
     </style>
-  </head>
+  <?php wp_head(); ?>
+</head>
   <body>
     <!-- Navbar -->
     <nav class="navbar scrolled" style="position: fixed; background-color: var(--white); box-shadow: 0 2px 10px rgba(0,0,0,0.1); padding: 15px 0;">
       <div class="nav-container">
-        <a href="index.html" class="logo" style="color: var(--darker);">
-          <span class="logo-text">CONCRETE <span class="highlight">WORLD</span></span>
+        <a href="<?php echo home_url('/'); ?>" class="logo" style="text-decoration: none; display: flex; align-items: center;">
+          <img src="<?php echo get_template_directory_uri(); ?>/src/assets/images/logo-white.png" alt="CONC CARE GROUP Logo" class="logo-for-dark" style="height: 60px; width: auto;" />
+          <img src="<?php echo get_template_directory_uri(); ?>/src/assets/images/logo.png" alt="CONC CARE GROUP Logo" class="logo-for-light" style="height: 60px; width: auto; display: none;" />
         </a>
         <ul class="nav-links">
-          <li><a href="index.html" style="color: var(--darker);">Home</a></li>
-          <li><a href="about.html" style="color: var(--primary);">About Us</a></li>
-          <li><a href="services.html" style="color: var(--darker);">Services</a></li>
-          <li><a href="projects.html" style="color: var(--darker);">Projects</a></li>
-          <li><a href="team.html" style="color: var(--darker);">Our Team</a></li>
+          <li><a href="<?php echo home_url('/'); ?>" style="color: var(--darker);">Home</a></li>
+          <li><a href="<?php echo home_url('/about/'); ?>" style="color: var(--primary);">About Us</a></li>
+          <li><a href="<?php echo home_url('/services/'); ?>" style="color: var(--darker);">Services</a></li>
+          <li><a href="<?php echo home_url('/projects/'); ?>" style="color: var(--darker);">Projects</a></li>
+          <li><a href="<?php echo home_url('/team/'); ?>" style="color: var(--darker);">Our Team</a></li>
         </ul>
         <div class="nav-actions">
           <a href="#" class="btn btn-primary quote-trigger">Get Quote</a>
@@ -65,7 +68,7 @@
     <!-- Page Header -->
     <section class="page-header">
       <div class="container fade-in-up">
-        <h1>About Concrete World</h1>
+        <h1>About Conc Care Group</h1>
         <p>Decades of experience in delivering high-quality, durable concrete solutions for commercial and residential needs.</p>
       </div>
     </section>
@@ -75,7 +78,7 @@
       <div class="container about-grid">
         <div class="about-text fade-in-up">
           <h2>Our Mission & Vision</h2>
-          <p>At Concrete World, our mission is to build foundations that last generations. We are committed to using the highest grade materials and advanced engineering techniques to ensure structural integrity and aesthetic excellence.</p>
+          <p>At Conc Care Group, our mission is to build foundations that last generations. We are committed to using the highest grade materials and advanced engineering techniques to ensure structural integrity and aesthetic excellence.</p>
           <p>Founded on the principles of hard work, consistency, and innovation, we have grown to become an industry leader in concrete pouring, finishing, and structural repair.</p>
           
           <h3 style="margin-top: 30px; margin-bottom: 15px;">Core Values</h3>
@@ -87,7 +90,7 @@
           </ul>
         </div>
         <div class="about-images fade-in-up delay-1">
-          <img src="/src/assets/images/pour.jpg" alt="Construction Work" style="width: 100%; border-radius: 20px; box-shadow: var(--shadow);" />
+          <img src="<?php echo get_template_directory_uri(); ?>/src/assets/images/pour.jpg" alt="Construction Work" style="width: 100%; border-radius: 20px; box-shadow: var(--shadow);" />
         </div>
       </div>
     </section>
@@ -105,7 +108,7 @@
             <div class="timeline-content">
               <span>1998</span>
               <h3>Company Founded</h3>
-              <p>Concrete World started as a small, family-owned residential driveway business with a single mixer truck.</p>
+              <p>Conc Care Group started as a small, family-owned residential driveway business with a single mixer truck.</p>
             </div>
           </div>
           <div class="timeline-container right-timeline slide-in-right">
@@ -144,30 +147,49 @@
     <footer class="footer">
       <div class="container">
         <div class="footer-top">
-          <a href="index.html" class="logo footer-logo">
-            <span class="logo-text">CONCRETE <span class="highlight">WORLD</span></span>
+          <div class="footer-col">
+            <a href="<?php echo home_url('/'); ?>" class="logo footer-logo" style="text-decoration: none; display: flex; align-items: center;">
+            <img src="<?php echo get_template_directory_uri(); ?>/src/assets/images/logo-white.png" alt="CONC CARE GROUP Logo" style="height: 60px; width: auto;" />
           </a>
-          <ul class="footer-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="team.html">Our Team</a></li>
-            <li><a href="#" class="quote-trigger">Contact</a></li>
-          </ul>
-          <div class="social-links">
-            <a href="#"><i class="fa-brands fa-twitter"></i></a>
-            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            <p style="color: #94A3B8; font-size: 0.95rem; line-height: 1.6; margin-top: -10px;">More Than Concrete.<br>A Stronger Future.</p>
+            <div class="social-links" style="margin-top: 10px;">
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+          </div>
+          
+          <div class="footer-col">
+            <h3>Quick Links</h3>
+            <ul class="footer-links">
+              <li><a href="<?php echo home_url('/'); ?>">Home</a></li>
+              <li><a href="<?php echo home_url('/about/'); ?>">About Us</a></li>
+              <li><a href="<?php echo home_url('/services/'); ?>">Services</a></li>
+              <li><a href="<?php echo home_url('/projects/'); ?>">Projects</a></li>
+              <li><a href="<?php echo home_url('/team/'); ?>">Our Team</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-col">
+            <h3>Contact Us</h3>
+            <div class="footer-contact-info">
+              <p><i class="fa-solid fa-phone"></i> 0430 922 430</p>
+              <p><i class="fa-solid fa-envelope"></i> Ccgconcrete24@gmail.com</p>
+              <p><i class="fa-solid fa-clock"></i> Mon-Fri: 7:00 AM - 5:00 PM</p>
+              <p><i class="fa-solid fa-location-dot"></i> Servicing Melbourne & Surrounding Areas</p>
+            </div>
           </div>
         </div>
-        <div class="footer-bottom">
-          <p>&copy; 2026 Concrete World. All copyrights reserved.</p>
+        <div class="footer-bottom" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; margin-top: 20px;">
+          <p>&copy; <?php echo date('Y'); ?> Conc Care Group. All rights reserved.</p>
+          <p style="margin: 0; font-size: 0.85rem;">ABN: 12 345 678 901 (Example)</p>
         </div>
       </div>
     </footer>
 
-    <script type="module" src="/src/main.js"></script>
-  </body>
+
+  <?php wp_footer(); ?>
+</body>
 </html>
+

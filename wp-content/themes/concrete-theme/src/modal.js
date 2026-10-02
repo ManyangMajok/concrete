@@ -83,3 +83,53 @@ document.addEventListener('click', (e) => {
     openModal(serviceType);
   }
 });
+
+// Handle form submission via AJAX
+const quoteForm = document.getElementById('quoteForm');
+if (quoteForm) {
+  quoteForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    if (typeof concrete_ajax === 'undefined') {
+      alert('Error: AJAX URL not found.');
+      return;
+    }
+    
+    const submitBtn = quoteForm.querySelector('button[type="submit"]');
+    const originalText = submitBtn.innerHTML;
+    submitBtn.innerHTML = 'Submitting...';
+    submitBtn.disabled = true;
+
+    const formData = new URLSearchParams();
+    formData.append('action', 'submit_quote_request');
+    formData.append('nonce', concrete_ajax.nonce);
+    formData.append('first_name', document.getElementById('m-firstName').value);
+    formData.append('last_name', document.getElementById('m-lastName').value);
+    formData.append('email', document.getElementById('m-email').value);
+    formData.append('service', document.getElementById('m-service').value);
+    formData.append('message', document.getElementById('m-message').value);
+
+    try {
+      const response = await fetch(concrete_ajax.ajax_url, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: formData.toString()
+      });
+      const result = await response.json();
+      
+      if (result.success) {
+        alert('Thank you! Your quote request has been submitted.');
+        quoteForm.reset();
+        closeModal();
+      } else {
+        alert(result.data.message || 'Something went wrong. Please try again.');
+      }
+    } catch (err) {
+      console.error(err);
+      alert('A network error occurred. Please try again.');
+    } finally {
+      submitBtn.innerHTML = originalText;
+      submitBtn.disabled = false;
+    }
+  });
+}

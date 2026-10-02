@@ -94,3 +94,60 @@ faqItems.forEach(item => {
     });
   }
 });
+
+// Testimonial Cards Logic
+const testimonialCards = document.querySelectorAll('.t-card');
+const tControls = document.querySelectorAll('.t-controls .control-btn');
+let currentTestimonial = 0;
+let testimonialInterval;
+
+function initTestimonials() {
+  const cards = document.querySelectorAll('.t-card');
+  if(cards.length === 0) return;
+  
+  cards.forEach((card, index) => {
+    card.className = 't-card hidden-card'; // reset all
+    if (index === currentTestimonial) {
+      card.className = 't-card front-card';
+    } else if (index === (currentTestimonial + 1) % cards.length) {
+      card.className = 't-card back-card';
+    } else if (index === (currentTestimonial - 1 + cards.length) % cards.length) {
+      card.className = 't-card leaving-card';
+    }
+  });
+}
+
+function nextTestimonial() {
+  const cards = document.querySelectorAll('.t-card');
+  if(cards.length === 0) return;
+  currentTestimonial = (currentTestimonial + 1) % cards.length;
+  initTestimonials();
+  resetTestimonialInterval();
+}
+
+function prevTestimonial() {
+  const cards = document.querySelectorAll('.t-card');
+  if(cards.length === 0) return;
+  currentTestimonial = (currentTestimonial - 1 + cards.length) % cards.length;
+  initTestimonials();
+  resetTestimonialInterval();
+}
+
+function resetTestimonialInterval() {
+  clearInterval(testimonialInterval);
+  testimonialInterval = setInterval(nextTestimonial, 3500);
+}
+
+if (testimonialCards.length > 0) {
+  initTestimonials();
+  resetTestimonialInterval();
+  
+  testimonialCards.forEach(card => {
+    card.addEventListener('click', nextTestimonial);
+  });
+  
+  if (tControls.length >= 2) {
+    tControls[0].addEventListener('click', prevTestimonial);
+    tControls[1].addEventListener('click', nextTestimonial);
+  }
+}

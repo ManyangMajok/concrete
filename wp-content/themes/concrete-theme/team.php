@@ -1,10 +1,11 @@
+<?php /* Template Name: team */ ?>
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Our Team | Concrete World</title>
+    <title>Our Team | Conc Care Group</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,7 +13,7 @@
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Main CSS -->
-    <link rel="stylesheet" href="/src/style.css" />
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/src/style.css" />
     <style>
       .page-header { background-color: var(--darker); padding: 150px 0 80px; text-align: center; color: var(--white); }
       .page-header h1 { font-size: 3.5rem; color: var(--white); margin-bottom: 15px; }
@@ -29,20 +30,22 @@
       @media (max-width: 992px) { .team-grid { grid-template-columns: repeat(2, 1fr); } }
       @media (max-width: 768px) { .team-grid { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <?php wp_head(); ?>
+</head>
   <body>
     <!-- Navbar -->
     <nav class="navbar scrolled" style="position: fixed; background-color: var(--white); box-shadow: 0 2px 10px rgba(0,0,0,0.1); padding: 15px 0;">
       <div class="nav-container">
-        <a href="index.html" class="logo" style="color: var(--darker);">
-          <span class="logo-text">CONCRETE <span class="highlight">WORLD</span></span>
+        <a href="<?php echo home_url('/'); ?>" class="logo" style="text-decoration: none; display: flex; align-items: center;">
+          <img src="<?php echo get_template_directory_uri(); ?>/src/assets/images/logo-white.png" alt="CONC CARE GROUP Logo" class="logo-for-dark" style="height: 60px; width: auto;" />
+          <img src="<?php echo get_template_directory_uri(); ?>/src/assets/images/logo.png" alt="CONC CARE GROUP Logo" class="logo-for-light" style="height: 60px; width: auto; display: none;" />
         </a>
         <ul class="nav-links">
-          <li><a href="index.html" style="color: var(--darker);">Home</a></li>
-          <li><a href="about.html" style="color: var(--darker);">About Us</a></li>
-          <li><a href="services.html" style="color: var(--darker);">Services</a></li>
-          <li><a href="projects.html" style="color: var(--darker);">Projects</a></li>
-          <li><a href="team.html" style="color: var(--primary);">Our Team</a></li>
+          <li><a href="<?php echo home_url('/'); ?>" style="color: var(--darker);">Home</a></li>
+          <li><a href="<?php echo home_url('/about/'); ?>" style="color: var(--darker);">About Us</a></li>
+          <li><a href="<?php echo home_url('/services/'); ?>" style="color: var(--darker);">Services</a></li>
+          <li><a href="<?php echo home_url('/projects/'); ?>" style="color: var(--darker);">Projects</a></li>
+          <li><a href="<?php echo home_url('/team/'); ?>" style="color: var(--primary);">Our Team</a></li>
         </ul>
         <div class="nav-actions">
           <a href="#" class="btn btn-primary quote-trigger">Get Quote</a>
@@ -63,25 +66,25 @@
     <section class="team-section">
       <div class="container team-grid">
         <div class="team-member fade-in-up delay-1">
-          <img src="/src/assets/images/engineer1.jpg" alt="Michael Harris" />
+          <img src="<?php echo get_template_directory_uri(); ?>/src/assets/images/engineer1.jpg" alt="Michael Harris" />
           <h3>Michael Harris</h3>
           <p>Chief Structural Engineer</p>
           <div class="bio">With 15 years in civil engineering, Michael ensures every design exceeds structural load requirements safely.</div>
         </div>
         <div class="team-member fade-in-up delay-2">
-          <img src="/src/assets/images/engineer3.jpg" alt="David Chen" />
+          <img src="<?php echo get_template_directory_uri(); ?>/src/assets/images/engineer3.jpg" alt="David Chen" />
           <h3>David Chen</h3>
           <p>Lead Site Foreman</p>
           <div class="bio">David has managed over 200 pours, coordinating logistics and managing teams to keep projects strictly on schedule.</div>
         </div>
         <div class="team-member fade-in-up delay-1">
-          <img src="/src/assets/images/engineer2.jpg" alt="Sarah Jenkins" />
+          <img src="<?php echo get_template_directory_uri(); ?>/src/assets/images/engineer2.jpg" alt="Sarah Jenkins" />
           <h3>Sarah Jenkins</h3>
           <p>Project Manager</p>
           <div class="bio">Sarah acts as the primary liaison for our commercial clients, handling budgeting, timelines, and procurement.</div>
         </div>
         <div class="team-member fade-in-up delay-2">
-          <img src="/src/assets/images/engineer4.jpg" alt="Robert Fox" />
+          <img src="<?php echo get_template_directory_uri(); ?>/src/assets/images/engineer4.jpg" alt="Robert Fox" />
           <h3>Robert Fox</h3>
           <p>Quality Assurance Lead</p>
           <div class="bio">Robert's meticulous eye ensures finishing and curing processes result in zero defects and maximum durability.</div>
@@ -93,30 +96,49 @@
     <footer class="footer bg-light">
       <div class="container">
         <div class="footer-top">
-          <a href="index.html" class="logo footer-logo">
-            <span class="logo-text">CONCRETE <span class="highlight">WORLD</span></span>
+          <div class="footer-col">
+            <a href="<?php echo home_url('/'); ?>" class="logo footer-logo" style="text-decoration: none; display: flex; align-items: center;">
+            <img src="<?php echo get_template_directory_uri(); ?>/src/assets/images/logo-white.png" alt="CONC CARE GROUP Logo" style="height: 60px; width: auto;" />
           </a>
-          <ul class="footer-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="team.html">Our Team</a></li>
-            <li><a href="#" class="quote-trigger">Contact</a></li>
-          </ul>
-          <div class="social-links">
-            <a href="#"><i class="fa-brands fa-twitter"></i></a>
-            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            <p style="color: #94A3B8; font-size: 0.95rem; line-height: 1.6; margin-top: -10px;">More Than Concrete.<br>A Stronger Future.</p>
+            <div class="social-links" style="margin-top: 10px;">
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+          </div>
+          
+          <div class="footer-col">
+            <h3>Quick Links</h3>
+            <ul class="footer-links">
+              <li><a href="<?php echo home_url('/'); ?>">Home</a></li>
+              <li><a href="<?php echo home_url('/about/'); ?>">About Us</a></li>
+              <li><a href="<?php echo home_url('/services/'); ?>">Services</a></li>
+              <li><a href="<?php echo home_url('/projects/'); ?>">Projects</a></li>
+              <li><a href="<?php echo home_url('/team/'); ?>">Our Team</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-col">
+            <h3>Contact Us</h3>
+            <div class="footer-contact-info">
+              <p><i class="fa-solid fa-phone"></i> 0430 922 430</p>
+              <p><i class="fa-solid fa-envelope"></i> Ccgconcrete24@gmail.com</p>
+              <p><i class="fa-solid fa-clock"></i> Mon-Fri: 7:00 AM - 5:00 PM</p>
+              <p><i class="fa-solid fa-location-dot"></i> Servicing Melbourne & Surrounding Areas</p>
+            </div>
           </div>
         </div>
-        <div class="footer-bottom">
-          <p>&copy; 2026 Concrete World. All copyrights reserved.</p>
+        <div class="footer-bottom" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; margin-top: 20px;">
+          <p>&copy; <?php echo date('Y'); ?> Conc Care Group. All rights reserved.</p>
+          <p style="margin: 0; font-size: 0.85rem;">ABN: 12 345 678 901 (Example)</p>
         </div>
       </div>
     </footer>
 
-    <script type="module" src="/src/main.js"></script>
-  </body>
+
+  <?php wp_footer(); ?>
+</body>
 </html>
+
