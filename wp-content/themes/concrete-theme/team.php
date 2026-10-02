@@ -126,7 +126,7 @@
               <p><i class="fa-solid fa-phone"></i> 0430 922 430</p>
               <p><i class="fa-solid fa-envelope"></i> Ccgconcrete24@gmail.com</p>
               <p><i class="fa-solid fa-clock"></i> Mon-Fri: 7:00 AM - 5:00 PM</p>
-              <p><i class="fa-solid fa-location-dot"></i> Servicing Melbourne & Surrounding Areas</p>
+              <p><i class="fa-solid fa-location-dot"></i> Servicing Perth & Surrounding Areas</p>
             </div>
           </div>
         </div>
