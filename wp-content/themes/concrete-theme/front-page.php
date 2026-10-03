@@ -48,7 +48,7 @@
         </div>
       </div>
       <div class="hero-image fade-in-left">
-        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Construction Worker" class="main-img" />
+        <img src="<?php echo get_template_directory_uri(); ?>/src/assets/images/hero-branded.jpg?v=<?php echo time(); ?>" alt="Construction Worker" class="main-img" />
       </div>
     </section>
 
