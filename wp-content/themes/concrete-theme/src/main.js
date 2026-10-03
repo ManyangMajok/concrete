@@ -35,15 +35,31 @@ animatedElements.forEach(el => observer.observe(el));
 
 
 // Mobile Navigation Logic
+// Build mobile nav from the desktop nav links (WordPress-aware)
+const desktopNav = document.querySelector('.nav-links');
+let mobileLinksHTML = '';
+if (desktopNav) {
+  const links = desktopNav.querySelectorAll('a');
+  links.forEach(link => {
+    mobileLinksHTML += `<li><a href="${link.href}">${link.textContent}</a></li>`;
+  });
+} else {
+  // Fallback if no desktop nav found
+  const baseUrl = window.location.origin;
+  mobileLinksHTML = `
+    <li><a href="${baseUrl}/">Home</a></li>
+    <li><a href="${baseUrl}/about/">About Us</a></li>
+    <li><a href="${baseUrl}/services/">Services</a></li>
+    <li><a href="${baseUrl}/projects/">Projects</a></li>
+    <li><a href="${baseUrl}/team/">Our Team</a></li>
+  `;
+}
+
 const mobileNavHTML = `
   <div class="mobile-nav" id="mobileNav">
     <button class="mobile-nav-close" id="mobileNavClose"><i class="fa-solid fa-xmark"></i></button>
     <ul class="mobile-nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="team.html">Our Team</a></li>
+      ${mobileLinksHTML}
     </ul>
     <div class="mobile-nav-actions">
       <a href="#" class="btn btn-primary quote-trigger" style="width: 100%; text-align: center;">Get Quote</a>
@@ -66,6 +82,22 @@ mobileMenuBtns.forEach(btn => {
 if (mobileNavClose) {
   mobileNavClose.addEventListener('click', () => {
     mobileNav.classList.remove('open');
+  });
+}
+
+// Close mobile nav when a link inside it is clicked
+if (mobileNav) {
+  mobileNav.querySelectorAll('.mobile-nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileNav.classList.remove('open');
+    });
+  });
+
+  // Close mobile nav when clicking the backdrop (::before area)
+  mobileNav.addEventListener('click', (e) => {
+    if (e.target === mobileNav) {
+      mobileNav.classList.remove('open');
+    }
   });
 }
 
