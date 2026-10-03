@@ -13,7 +13,7 @@
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Main CSS -->
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/src/style.css" />
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/src/style.css?v=<?php echo time(); ?>" />
     <style>
       .page-header { background-color: var(--darker); padding: 150px 0 80px; text-align: center; color: var(--white); }
       .page-header h1 { font-size: 3.5rem; color: var(--white); margin-bottom: 15px; }
@@ -48,8 +48,8 @@
     <nav class="navbar scrolled" style="position: fixed; background-color: var(--white); box-shadow: 0 2px 10px rgba(0,0,0,0.1); padding: 15px 0;">
       <div class="nav-container">
         <a href="<?php echo home_url('/'); ?>" class="logo" style="text-decoration: none; display: flex; align-items: center;">
-          <img src="<?php echo get_template_directory_uri(); ?>/src/assets/images/logo-white.png" alt="CONC CARE GROUP Logo" class="logo-for-dark" style="height: 60px; width: auto;" />
-          <img src="<?php echo get_template_directory_uri(); ?>/src/assets/images/logo.png" alt="CONC CARE GROUP Logo" class="logo-for-light" style="height: 60px; width: auto; display: none;" />
+          <img src="<?php echo get_template_directory_uri(); ?>/src/assets/images/logo-white.png?v=<?php echo time(); ?>" alt="CONC CARE GROUP Logo" class="logo-for-dark" style="height: 60px; width: auto;" />
+          <img src="<?php echo get_template_directory_uri(); ?>/src/assets/images/logo.png?v=<?php echo time(); ?>" alt="CONC CARE GROUP Logo" class="logo-for-light" style="height: 60px; width: auto; display: none;" />
         </a>
         <ul class="nav-links">
           <li><a href="<?php echo home_url('/'); ?>" style="color: var(--darker);">Home</a></li>
@@ -149,7 +149,7 @@
         <div class="footer-top">
           <div class="footer-col">
             <a href="<?php echo home_url('/'); ?>" class="logo footer-logo" style="text-decoration: none; display: flex; align-items: center;">
-            <img src="<?php echo get_template_directory_uri(); ?>/src/assets/images/logo-white.png" alt="CONC CARE GROUP Logo" style="height: 60px; width: auto;" />
+            <img src="<?php echo get_template_directory_uri(); ?>/src/assets/images/logo-white.png?v=<?php echo time(); ?>" alt="CONC CARE GROUP Logo" style="height: 60px; width: auto;" />
           </a>
             <p style="color: #94A3B8; font-size: 0.95rem; line-height: 1.6; margin-top: -10px;">More Than Concrete.<br>A Stronger Future.</p>
             <div class="social-links" style="margin-top: 10px;">

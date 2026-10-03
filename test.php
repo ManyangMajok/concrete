@@ -1,0 +1,1 @@
+require 'wp-load.php'; $q = new WP_Query(['post_type'=>'project', 'posts_per_page'=>-1]); echo 'Found: ' . $q->found_posts . "\n"; foreach($q->posts as $p) { echo $p->post_title . ' - ' . get_post_meta($p->ID, '_project_image_url', true) . "\n"; }

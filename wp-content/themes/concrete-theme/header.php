@@ -15,8 +15,8 @@
     <nav class="navbar">
       <div class="nav-container">
         <a href="<?php echo home_url('/'); ?>" class="logo" style="text-decoration: none; display: flex; align-items: center;">
-          <img src="<?php echo get_template_directory_uri(); ?>/src/assets/images/logo-white.png" alt="CONC CARE GROUP Logo" class="logo-for-dark" style="height: 60px; width: auto;" />
-          <img src="<?php echo get_template_directory_uri(); ?>/src/assets/images/logo.png" alt="CONC CARE GROUP Logo" class="logo-for-light" style="height: 60px; width: auto; display: none;" />
+          <img src="<?php echo get_template_directory_uri(); ?>/src/assets/images/logo-white.png?v=<?php echo time(); ?>" alt="CONC CARE GROUP Logo" class="logo-for-dark" style="height: 60px; width: auto;" />
+          <img src="<?php echo get_template_directory_uri(); ?>/src/assets/images/logo.png?v=<?php echo time(); ?>" alt="CONC CARE GROUP Logo" class="logo-for-light" style="height: 60px; width: auto; display: none;" />
         </a>
         <?php
         if (has_nav_menu('primary')) {

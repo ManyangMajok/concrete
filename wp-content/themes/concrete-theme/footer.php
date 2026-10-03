@@ -3,7 +3,7 @@
       <div class="container">
         <div class="footer-top">
           <a href="<?php echo home_url('/'); ?>" class="logo footer-logo" style="text-decoration: none; display: flex; align-items: center;">
-            <img src="<?php echo get_template_directory_uri(); ?>/src/assets/images/logo-white.png" alt="CONC CARE GROUP Logo" style="height: 60px; width: auto;" />
+            <img src="<?php echo get_template_directory_uri(); ?>/src/assets/images/logo-white.png?v=<?php echo time(); ?>" alt="CONC CARE GROUP Logo" style="height: 60px; width: auto;" />
           </a>
           <ul class="footer-links">
             <li><a href="<?php echo home_url('/'); ?>">Home</a></li>
