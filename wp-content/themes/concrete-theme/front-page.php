@@ -69,7 +69,7 @@
         <div class="about-images slide-in-right">
           <!-- Puzzle shape mask using CSS -->
           <div class="image-mask-container">
-            <img src="<?php echo get_template_directory_uri(); ?>/src/assets/images/mixer.jpg" alt="Concrete Mixer Truck" class="mask-img-1" />
+            <img src="<?php echo get_template_directory_uri(); ?>/src/assets/images/mixer.jpg?v=<?php echo time(); ?>" alt="Concrete Mixer Truck" class="mask-img-1" />
             <img src="<?php echo get_template_directory_uri(); ?>/src/assets/images/pour.jpg" alt="Concrete Pouring" class="mask-img-2" />
           </div>
         </div>
@@ -153,7 +153,7 @@
           </div>
           <div class="t-card hidden-card">
             <div class="t-profile">
-              <img src="<?php echo get_template_directory_uri(); ?>/src/assets/images/mixer.jpg" style="border-radius:50%; width:50px; height:50px; object-fit:cover;" alt="Client 3" />
+              <img src="<?php echo get_template_directory_uri(); ?>/src/assets/images/mixer.jpg?v=<?php echo time(); ?>" style="border-radius:50%; width:50px; height:50px; object-fit:cover;" alt="Client 3" />
               <div>
                 <h4>Sarah Jenkins</h4>
                 <span>Homeowner</span>
