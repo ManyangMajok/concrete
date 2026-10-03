@@ -2,7 +2,7 @@
 const floatingHTML = `
 <div class="floating-contact" id="floatingContact">
   <div class="fc-menu" id="fcMenu">
-    <a href="tel:+15551234567" class="fc-menu-item">
+    <a href="tel:0430922430" class="fc-menu-item">
       <span class="fc-tooltip">Call Us</span>
       <div class="fc-icon"><i class="fa-solid fa-phone"></i></div>
     </a>
