@@ -237,7 +237,7 @@
               $p = $projects[0];
               $img_url = get_the_post_thumbnail_url($p->ID, 'large');
               if (!$img_url) { $img_url = get_post_meta($p->ID, '_project_image_url', true); }
-              if (!$img_url) { $img_url = get_template_directory_uri() . '/src/assets/images/commercial.jpg'; }
+              if (!$img_url) { $img_url = get_template_directory_uri() . '/src/assets/images/pour.jpg'; }
           ?>
           <div class="news-main fade-in-up">
             <img src="<?php echo esc_url($img_url); ?>" style="height: 100%; object-fit: cover;" alt="<?php echo esc_attr($p->post_title); ?>" />
